@@ -2,6 +2,12 @@
 
 import { useState } from 'react';
 
+const sendToWhatsApp = (message: string) => {
+  const phoneNumber = '919149511328';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
 export default function BookingSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,7 +28,30 @@ export default function BookingSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Create personalized message with form data
+    const enquiryMessage = `Hey Rajdani Travels! I want to book a tour package.
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Destination: ${formData.destination}
+Travel Date: ${formData.date}
+Number of Travelers: ${formData.travelers}
+Message: ${formData.message}`;
+
+    sendToWhatsApp(enquiryMessage);
+    
+    // Reset form
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      destination: '',
+      date: '',
+      travelers: '',
+      message: '',
+    });
   };
 
   return (
@@ -43,7 +72,7 @@ export default function BookingSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-[#1A1A1A] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FBBF24] text-sm"
+                  className="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-[#1A1A1A] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FBBF24] text-sm cursor-text"
                   placeholder="Your Name"
                 />
               </div>
@@ -128,7 +157,7 @@ export default function BookingSection() {
 
               <button
                 type="submit"
-                className="w-full px-6 md:px-8 py-2 md:py-3 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base"
+                className="w-full px-6 md:px-8 py-2 md:py-3 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base cursor-pointer"
               >
                 Send Enquiry
               </button>

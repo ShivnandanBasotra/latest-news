@@ -1,16 +1,23 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-[#FFF8F0] border-b-2 border-[#1A1A1A]">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#1A1A1A]">
-          <span className="text-[#FBBF24]">Rajdani</span> <span className="hidden sm:inline">Travels</span>
+        <div className="flex items-center">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%2C%2004_41_58%20PM-kJUZGdy4m2tWw4vlnXYEcNU5qdLkjH.png"
+            alt="Rajdani Travels"
+            width={120}
+            height={60}
+            className="w-24 sm:w-32 md:w-40 h-auto object-contain"
+          />
         </div>
 
         {/* Desktop Menu */}
@@ -25,7 +32,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex flex-col gap-1 w-6 h-6"
+          className="md:hidden flex flex-col gap-1 w-6 h-6 cursor-pointer"
         >
           <div className={`w-full h-0.5 bg-[#1A1A1A] transition-all ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
           <div className={`w-full h-0.5 bg-[#1A1A1A] transition-all ${isOpen ? 'opacity-0' : ''}`}></div>

@@ -1,3 +1,9 @@
+const sendToWhatsApp = (message: string) => {
+  const phoneNumber = '919149511328';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
 export default function HeroSection() {
   return (
     <section id="home" className="py-8 md:py-16 lg:py-24 bg-[#FFF8F0] border-b-2 border-[#1A1A1A]">
@@ -19,10 +25,16 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4 justify-center">
-            <button className="px-6 md:px-8 py-2 md:py-3 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base">
+            <button 
+              onClick={() => sendToWhatsApp('Hey Rajdani Travels! I want to plan my next trip.')}
+              className="px-6 md:px-8 py-2 md:py-3 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base cursor-pointer"
+            >
               Plan Your Trip
             </button>
-            <button className="px-6 md:px-8 py-2 md:py-3 bg-white text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#FFF8F0] transition text-sm md:text-base">
+            <button 
+              onClick={() => sendToWhatsApp('Hey Rajdani Travels! I would like to explore your tour packages.')}
+              className="px-6 md:px-8 py-2 md:py-3 bg-white text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#FFF8F0] transition text-sm md:text-base cursor-pointer"
+            >
               Explore Packages
             </button>
           </div>

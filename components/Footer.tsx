@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -20,9 +21,13 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
             {/* Brand */}
             <div className="space-y-3 md:space-y-4">
-              <h3 className="text-xl md:text-2xl font-bold">
-                RAJDANI.
-              </h3>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%2C%2004_41_58%20PM-kJUZGdy4m2tWw4vlnXYEcNU5qdLkjH.png"
+                alt="Rajdani Travels"
+                width={120}
+                height={60}
+                className="w-32 md:w-40 h-auto object-contain"
+              />
               <p className="text-xs md:text-sm text-gray-400 leading-relaxed">
                 Making travel accessible and unforgettable for everyone.
               </p>
@@ -85,7 +90,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="w-full px-3 md:px-4 py-1.5 md:py-2 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded hover:bg-[#F59E0B] transition text-xs md:text-sm"
+                  className="w-full px-3 md:px-4 py-1.5 md:py-2 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded hover:bg-[#F59E0B] transition text-xs md:text-sm cursor-pointer"
                 >
                   SUBSCRIBE
                 </button>

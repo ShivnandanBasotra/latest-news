@@ -2,6 +2,12 @@
 
 import { ArrowRight } from 'lucide-react';
 
+const sendToWhatsApp = (message: string) => {
+  const phoneNumber = '919149511328';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
 export default function DestinationsSection() {
   const destinations = [
     {
@@ -112,7 +118,10 @@ export default function DestinationsSection() {
                       {destination.price}
                     </p>
                   </div>
-                  <button className="rounded-full bg-[#FBBF24] p-3 text-[#1A1A1A] hover:bg-[#F59E0B] transition-colors border-2 border-[#1A1A1A]">
+                  <button 
+                    onClick={() => sendToWhatsApp(`Hey Rajdani Travels! I'm interested in visiting ${destination.name}, ${destination.country}.`)}
+                    className="rounded-full bg-[#FBBF24] p-3 text-[#1A1A1A] hover:bg-[#F59E0B] transition-colors border-2 border-[#1A1A1A] cursor-pointer"
+                  >
                     <ArrowRight size={20} />
                   </button>
                 </div>
