@@ -17,7 +17,7 @@ export default function FloatingWhatsApp() {
 
 
   return (
-    <div className="fixed bottom-3 right-3  z-50">
+    <div className="fixed bottom-2 right-2 md:bottom-3 md:right-3  z-50">
 
       {/* Floating Button */}
       <button
