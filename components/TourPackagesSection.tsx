@@ -2,6 +2,12 @@
 
 import { useState } from 'react';
 
+const sendToWhatsApp = (message: string) => {
+  const phoneNumber = '919149511328';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
 const indianPackages = [
   { id: 1, name: 'Kashmir Tour Package', emoji: '🏔️' },
   { id: 2, name: 'Himachal Tour Package', emoji: '🏞️' },
@@ -82,8 +88,11 @@ export default function TourPackagesSection() {
                 <h3 className="text-lg md:text-xl font-bold text-[#1A1A1A] text-balance">{pkg.name}</h3>
                 <p className="text-xs sm:text-sm text-[#666666]">Contact For More Details</p>
                 
-                <button className="w-full px-4 md:px-6 py-2 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base">
-                  Explore More
+                <button 
+                  onClick={() => sendToWhatsApp(`Hey Rajdani Travels! I want to book ${pkg.name}.`)}
+                  className="w-full px-4 md:px-6 py-2 bg-[#FBBF24] text-[#1A1A1A] font-bold rounded-full border-2 border-[#1A1A1A] hover:bg-[#F59E0B] transition text-sm md:text-base cursor-pointer"
+                >
+                  Book Now
                 </button>
               </div>
             </div>

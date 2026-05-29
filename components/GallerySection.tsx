@@ -1,13 +1,24 @@
 const galleryImages = [
-  { emoji: '🏔️', title: 'Mountains' },
-  { emoji: '🏖️', title: 'Beaches' },
-  { emoji: '🕌', title: 'Temples' },
-  { emoji: '🌲', title: 'Forests' },
-  { emoji: '🏰', title: 'Palaces' },
-  { emoji: '🌊', title: 'Rivers' },
-  { emoji: '🏞️', title: 'Landscapes' },
-  { emoji: '🎪', title: 'Culture' },
-  { emoji: '🌅', title: 'Sunsets' },
+  {
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-28%20at%202.22.08%20PM-BMJ0fA6X9OvWQK4qwemrBNsXc7eHp0.jpeg',
+    title: 'Festival Celebration',
+  },
+  {
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-28%20at%202.22.07%20PM-iSK9JJmFtL9tcSG67RfuT9eZQ8u2tj.jpeg',
+    title: 'Heritage Visit',
+  },
+  {
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-28%20at%202.22.07%20PM%20%282%29-bYj18vILEhSSiUgRR8XL7UmB8U4jRM.jpeg',
+    title: 'Pahalgam Valley',
+  },
+  {
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-28%20at%202.22.07%20PM%20%281%29-Q6kWi9kkbjd09W5bFRDglfjFJWjRFM.jpeg',
+    title: 'Bus Journey',
+  },
+  {
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-28%20at%202.22.08%20PM%20%281%29-UXEQ5Hlg75JPpuReq0PevcF4KqdTVJ.jpeg',
+    title: 'Friends',
+  },
 ];
 
 export default function GallerySection() {
@@ -18,17 +29,19 @@ export default function GallerySection() {
           Gallery
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 md:gap-4">
           {galleryImages.map((image, idx) => (
             <div
               key={idx}
-              className="aspect-square bg-gradient-to-br from-[#FBBF24] to-[#F59E0B] rounded-lg border-2 border-[#1A1A1A] overflow-hidden group cursor-pointer hover:shadow-lg transition-all"
+              className="aspect-square rounded-lg border-2 border-[#1A1A1A] overflow-hidden group cursor-pointer hover:shadow-lg transition-all"
             >
-              <div className="w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <div className="text-center px-2">
-                  <div className="text-4xl md:text-5xl lg:text-6xl mb-1 md:mb-2">{image.emoji}</div>
-                  <p className="font-bold text-white text-xs md:text-sm">{image.title}</p>
-                </div>
+              <img
+                src={image.image}
+                alt={image.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+                <p className="font-bold text-white text-sm">{image.title}</p>
               </div>
             </div>
           ))}

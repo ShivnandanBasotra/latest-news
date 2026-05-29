@@ -1,3 +1,9 @@
+const sendToWhatsApp = (message: string) => {
+  const phoneNumber = '919149511328';
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+};
+
 export default function TransportSection() {
   const transportServices = [
     'Airport / Railway Station Pick & Drop',
@@ -18,7 +24,10 @@ export default function TransportSection() {
               Transport Services by Rajdani Travels
             </h2>
 
-            <button className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-[#1A1A1A] text-white font-bold rounded hover:bg-[#333333] transition text-sm md:text-base">
+            <button 
+              onClick={() => sendToWhatsApp('Hey Rajdani Travels! I need transportation services.')}
+              className="w-full md:w-auto px-6 md:px-8 py-2 md:py-3 bg-[#1A1A1A] text-white font-bold rounded hover:bg-[#333333] transition text-sm md:text-base cursor-pointer"
+            >
               Book Now
             </button>
           </div>

@@ -4,11 +4,11 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
           {/* Left - Image */}
-          <div className="flex items-center justify-center h-auto w-4/5 md:w-full mx-auto">
+          <div className="flex items-center justify-center h-auto">
             <img 
               src="/images/rahdanni-bus.png" 
               alt="Rahdanni Travels Bus" 
-              className="w-full h-auto max-h-64 sm:max-h-72 md:max-h-none object-contain md:scale-90 md:origin-center"
+              className="w-full h-auto object-contain md:scale-90 md:origin-center"
             />
           </div>
 
