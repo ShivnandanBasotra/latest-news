@@ -17,7 +17,7 @@ export default function FloatingWhatsApp() {
 
 
   return (
-    <div className="fixed bottom-2 right-2  z-50">
+    <div className="fixed bottom-3 right-3  z-50">
 
       {/* Floating Button */}
       <button
@@ -28,7 +28,7 @@ export default function FloatingWhatsApp() {
           alt="WhatsApp"
           width={32}
           height={32}
-          className="w-10 h-10 md:w-14 md:h-14 hover:scale-110 cursor-pointer object-contain"
+          className="w-12 h-12 md:w-14 md:h-14 hover:scale-110 cursor-pointer object-contain"
         />
       </button>
     </div>
