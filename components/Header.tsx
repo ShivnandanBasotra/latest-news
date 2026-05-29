@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#FFF8F0] border-b-2 border-[#1A1A1A]">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 md:py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
           <Image
