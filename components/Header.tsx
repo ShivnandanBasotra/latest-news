@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FFF8F0] border-b-2 border-[#1A1A1A]">
+    <header className="sticky top-0 z-50 bg-red-500 border-b-2 border-[#1A1A1A]">
       <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between py-2">
         
         {/* Logo */}
