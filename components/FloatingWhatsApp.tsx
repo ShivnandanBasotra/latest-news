@@ -28,7 +28,7 @@ export default function FloatingWhatsApp() {
           alt="WhatsApp"
           width={32}
           height={32}
-          className="w-14 h-14 hover:scale-110 cursor-pointer object-contain"
+          className="w-10 h-10 md:w-14 md:h-14 hover:scale-110 cursor-pointer object-contain"
         />
       </button>
     </div>
