@@ -15,7 +15,7 @@ export default function Header() {
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%2C%2004_41_58%20PM-kJUZGdy4m2tWw4vlnXYEcNU5qdLkjH.png"
             alt="Rajdani Travels"
             width={120}
-           
+            height={60}
             className="w-24 sm:w-32 md:w-40 h-auto object-contain"
           />
         </div>
