@@ -50,7 +50,7 @@ export default function FloatingWhatsApp() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full border-2 border-[#1A1A1A] flex items-center justify-center shadow-lg hover:scale-110 transition-transform hover:bg-[#20BA5A] cursor-pointer"
+        className=""
       >
         <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E2%80%94Pngtree%E2%80%94whatsapp%20phone%20icon%20vector_8704826-7CFxK8Aq2cYzo2p7zu9cQS5Z7fENVF.png"
