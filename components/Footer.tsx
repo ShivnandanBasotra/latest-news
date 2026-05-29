@@ -22,7 +22,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="space-y-3 md:space-y-4">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%2C%2004_41_58%20PM-kJUZGdy4m2tWw4vlnXYEcNU5qdLkjH.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20May%2025%2C%202026%2C%2004_41_58%20PM-yUV7spJZVqv5MDGzV3mc92O12MAsHZ.png"
                 alt="Rajdani Travels"
                 width={120}
                 height={60}
