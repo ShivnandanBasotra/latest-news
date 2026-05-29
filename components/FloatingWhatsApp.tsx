@@ -10,18 +10,15 @@ const sendToWhatsApp = (message: string) => {
 };
 
 export default function FloatingWhatsApp() {
-  const [isOpen, setIsOpen] = useState(false);
+
 
   const handleStartChat = () => {
     sendToWhatsApp('Hey Rajdani Travels! I want to know more about your tour packages.');
   };
 
-  const handleCallUs = () => {
-    window.open('tel:+919149511328');
-  };
 
   return (
-    <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50">
+    <div className="fixed bottom-2 right-2  z-50">
 
       {/* Floating Button */}
       <button
