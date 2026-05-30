@@ -33,14 +33,14 @@ export default function GallerySection() {
           {galleryImages.map((image, idx) => (
             <div
               key={idx}
-              className="aspect-square rounded-lg border-2 border-[#1A1A1A] overflow-hidden group cursor-pointer hover:shadow-lg transition-all"
+              className="aspect-square rounded-lg border-2 border-[#1A1A1A] overflow-hidden group cursor-pointer hover:shadow-lg transition-all relative"
             >
               <img
                 src={image.image}
                 alt={image.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4 pointer-events-none">
                 <p className="font-bold text-white text-sm">{image.title}</p>
               </div>
             </div>
